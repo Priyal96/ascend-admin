@@ -4,7 +4,6 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { AdminLayout } from "@/components/AdminLayout";
-import { Home } from "./pages/Home";
 import Dashboard from "./pages/Dashboard";
 import UserManagement from "./pages/UserManagement";
 import RolesPermissions from "./pages/RolesPermissions";
@@ -21,8 +20,7 @@ const App = () => (
       <Sonner />
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/admin" element={<AdminLayout />}>
+          <Route path="/" element={<AdminLayout />}>
             <Route index element={<Dashboard />} />
             <Route path="users" element={<UserManagement />} />
             <Route path="roles" element={<RolesPermissions />} />
